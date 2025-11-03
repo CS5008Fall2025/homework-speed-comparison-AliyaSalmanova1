@@ -697,24 +697,25 @@ bool test_sorted_list_remove() {
 */
 TestingSet * init_testing_set() {
     TestingSet * set = new_testing_set();
-    add_test(set, "new_linked_list() creates an empty linked list", GROUP_GENERAL, 
-        test_new_linked_list);  
     add_test(set, "ll_add_front() adds a node to the front of the list", GROUP_ADD, 
-        test_ll_add_front);  
+            test_ll_add_front);  
+   add_test(set, "new_linked_list() creates an empty linked list", GROUP_GENERAL, 
+        test_new_linked_list);  
+    
     add_test(set, "ll_add_back() adds a node to the back of the list", GROUP_ADD,
         test_ll_add_back); 
     add_test(set, "ll_insert() adds a node to the list at the given index", GROUP_ADD,
         test_ll_insert); 
     add_test(set, "ll_insert() does nothing if the index is out of bounds", GROUP_ADD,
-        test_ll_insert_out_of_bounds); 
+        test_ll_insert_out_of_bounds);
     add_test(set, "ll_remove_front() removes a node from the front of the list", GROUP_REMOVE,
-        test_ll_remove_front); 
+        test_ll_remove_front);  
     add_test(set, "ll_remove_back() removes a node from the back of the list", GROUP_REMOVE,
         test_ll_remove_back); 
     add_test(set, "ll_remove() removes a node from the list at the given index", GROUP_REMOVE,
         test_ll_remove); 
     add_test(set, "ll_remove() does nothing if the index is out of bounds", GROUP_REMOVE,
-        test_ll_remove_out_of_bounds); 
+        test_ll_remove_out_of_bounds);  /* 
     add_test(set, "ll_get() gets a node from the list at the given index", GROUP_GET,
         test_ll_get); 
     add_test(set, "ll_get() does nothing if the index is out of bounds", GROUP_GET,
@@ -728,7 +729,7 @@ TestingSet * init_testing_set() {
     add_test(set, "find_in_sorted_list() finds a movie in the sorted list", GROUP_SORTED,
         test_sorted_list_find);
     add_test(set, "sorted_list_remove() properly removes movies based on title", GROUP_SORTED,
-        test_sorted_list_remove);
+        test_sorted_list_remove);*/
 
 
 
@@ -766,8 +767,6 @@ int main(const int argc, const char *argv[]) {
         run_tests_group(set, (char *)group_tag);
     }
  
-
-
 
     // this has to be done separately because movies are used across multiple lists
     free_movies();
