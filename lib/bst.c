@@ -1,9 +1,9 @@
 /**
  * Basic BST implementation.
  *
- * @author: STUDENT ADD YOUR NAME
+ * @author: Aliya Salmanova
  * @class: CS 5008
- * @term: UPDATE WITH CURRENT SEMESTER
+ * @term: Fall 2025
  */
 
 #include <stdbool.h>
@@ -91,7 +91,21 @@ void clear_and_free_bst(BST * bst) {
  * @param movie the movie to add 
 */
 void __bst__add(BSTNode * curr, Movie * movie) {
-   // STUDENT TODO: implement this function
+    int comparison = compare_movies(movie, curr->movie);
+    if (comparison >= 0){
+        if (curr->right == NULL){
+            curr->right = __bst__new_node(movie);
+        } else {
+            __bst__add(curr->right, movie);
+        }
+    } else {
+        if (curr->left == NULL){
+            curr->left = __bst__new_node(movie);
+        } else {
+            __bst__add(curr->left, movie);
+        }
+    }
+    
 }
 /**
  * Adds the given movie into the BST. 
@@ -185,9 +199,15 @@ void bst_remove(BST * bst, Movie * movie) {
  * @return the node that was found
 */
 BSTNode * __bst__find(BSTNode * curr, const char * title) {
-   // STUDENT TODO: implement this function
 
-   return NULL; // STUDENT TODO: update this return statement if needed
+    if (curr == NULL || curr->movie == NULL) return NULL;
+    int comparison = strcasecmp(title, curr->movie->title);
+    if (comparison == 0) return curr;
+    else if (comparison > 0){
+        return __bst__find(curr->right, title);
+    }else {
+        return __bst__find(curr->left, title);
+    }
 }
 
 /**
@@ -250,8 +270,12 @@ char * __bst__update_str(Movie * movie, char * str) {
  * @return the string that was appended to
 */
 char * __bst__to_str_postorder(BSTNode * curr, char * str) {
-    // STUDENT TODO: implement this function
-    return str;
+    // STUDENT TODO: implement this function - check
+    if (curr == NULL) return str;
+    
+    str = __bst__to_str_postorder(curr->left, str);
+    str = __bst__to_str_postorder(curr->right, str);
+    return __bst__update_str(curr->movie, str);
 }
 
 /**
@@ -266,8 +290,13 @@ char * __bst__to_str_postorder(BSTNode * curr, char * str) {
  *
  */
 char * __bst__to_str_preorder(BSTNode * curr, char * str) {
-    // STUDENT TODO: implement this function
-    return str;
+    // STUDENT TODO: implement this function - check
+    if (curr == NULL) return str;
+    
+    str = __bst__update_str(curr->movie, str);
+    str = __bst__to_str_preorder(curr->left, str);
+    return __bst__to_str_preorder(curr->right, str);
+
 }
 
 /**
@@ -282,8 +311,12 @@ char * __bst__to_str_preorder(BSTNode * curr, char * str) {
  * @return the string that was appended to
 */
 char * __bst__to_str_inorder(BSTNode * curr, char * str) {
-    // STUDENT TODO: implement this function
-    return str;
+    // STUDENT TODO: implement this function - check
+    if (curr == NULL) return str;
+    
+    str = __bst__to_str_inorder(curr->left, str);
+    str = __bst__update_str(curr->movie, str);
+    return __bst__to_str_inorder(curr->right, str);
 }
 
 
@@ -365,6 +398,13 @@ char * bst_to_str(BST * tree, int traversal) {
 */
 void __bst__to_sorted_array(BSTNode * curr, Movie ** array, int * index) {
     // STUDENT TODO: implement this function
+    if (curr == NULL) return;
+    
+    __bst__to_sorted_array(curr->left, array, index);
+    array[*index] = curr->movie;
+    (*index)++;
+    __bst__to_sorted_array(curr->right, array, index);
+    return;
 }
 
 /**
