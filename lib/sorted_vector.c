@@ -50,9 +50,11 @@ void add_to_sorted_vector(SortedMovieVector * vector, Movie * movie) {
  */
 
 Movie * binarySearch(Movie **movies, const char *title, int left, int right){
+    if (movies == NULL || title == NULL) return NULL;
+    if (left >= right) return NULL;
     int mid = (left + right) / 2;
     int comparison = strcasecmp(movies[mid]->title, title);
-    if (left >= right) return NULL;
+    
     if (comparison == 0) return movies[mid];
     else if (comparison > 0){
         return binarySearch(movies, title, left, mid);
