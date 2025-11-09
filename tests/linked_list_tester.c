@@ -715,7 +715,7 @@ TestingSet * init_testing_set() {
     add_test(set, "ll_remove() removes a node from the list at the given index", GROUP_REMOVE,
         test_ll_remove); 
     add_test(set, "ll_remove() does nothing if the index is out of bounds", GROUP_REMOVE,
-        test_ll_remove_out_of_bounds);  /* 
+        test_ll_remove_out_of_bounds);  
     add_test(set, "ll_get() gets a node from the list at the given index", GROUP_GET,
         test_ll_get); 
     add_test(set, "ll_get() does nothing if the index is out of bounds", GROUP_GET,
@@ -729,11 +729,7 @@ TestingSet * init_testing_set() {
     add_test(set, "find_in_sorted_list() finds a movie in the sorted list", GROUP_SORTED,
         test_sorted_list_find);
     add_test(set, "sorted_list_remove() properly removes movies based on title", GROUP_SORTED,
-        test_sorted_list_remove);*/
-
-
-
-        
+        test_sorted_list_remove);
 
 
     return set;
