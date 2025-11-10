@@ -421,8 +421,6 @@ void remove_front_tests(int total, double *results, MovieVector *vector, LinkedL
 */
 void remove_back_tests(int total, double *results, MovieVector *vector, LinkedList *list) {
 
-
-
     LOG_INFO("Removing movies %d from back of each data structure\n", total);
 
     LOG_DEBUG("Removing from vector\n");
