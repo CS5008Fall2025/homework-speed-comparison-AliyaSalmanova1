@@ -285,14 +285,18 @@ LIFO is useful in programs that have command Z, such as the one I'm using now - 
 
 2. Select one coding question (this module or previous) from the [coding practice repository](https://github.com/CS5008-khoury/Resources/blob/main/LeetCodePractice.md) and include a c file with that code with your submission. Make sure to add comments on what you learned, and if you compared your solution with others. 
 
+I included the file ./bstMaximumDepth.c. I compared my solution to other solutions on leetcode. 
+The solutions I saw look a bit differently than mine, as it is possible to solve this without a helper function. 
+However, the logic of the solutions are similar. 
 
+I practiced thinking recursively. 
 
 ## References
 
 Add your references here. A good reference includes an inline citation, such as [1] , and then down in your references section, you include the full details of the reference. Computer Science research often uses [IEEE] or [ACM Reference format].
 
 harendrakumar123. (2025, September 24). Binary search tree. GeeksforGeeks. https://www.geeksforgeeks.org/dsa/binary-search-tree-data-structure/
-https://www.upgrad.com/blog/stack-example-in-real-life/ 
+Kumar, M. (2025, September 17). Best 12 stack examples in real life in simple explanation. upGrad blog. https://www.upgrad.com/blog/stack-example-in-real-life/
 
 [1] Reference info, date, etc.
 
