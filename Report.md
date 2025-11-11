@@ -28,6 +28,8 @@ Don't forget to use latex math notation (example in the table).
 | Sorted Double Linked List |   $O(n)$   |   $O(n)$   |   $O(n)$    |    $O(1)$    |    ---    |       ---       |     ---      |     ---     |     ---      |
 | Binary Search Tree        | $O(log n)$ | $O(log n)$ | $O(log n)$  |    $O(n)$    |    ---    |       ---       |     ---      |     ---     |     ---      |
 
+*note: I assumed that we are inserting at a particular index
+
 For Sort, we are asking for the Big $O$ for taking the current data structure and writing it 'sorted' to a file. However, not the file writes. For example, if you have a vector of 1000 elements, and you want to write it to a file, you would need to sort it first. So, the Big $O$ for this would be the Big $O$ for sorting. For BST, you have to convert the tree to a sequential structure, so the cost of doing that.  
 
 ### Assumptions with Sort
