@@ -348,7 +348,7 @@ For example:
    or traverse right linearly if it is sorted descending. 
 
 3. Researching beyond the module, how would one fix a BST so the worst case scenario matches (or at least is closer to) the average case.[^1^] \
-   There are ways to write 'self-balancing' binary search trees. These self-balancing trees are called AVL trees and Red Black Trees. [^2^]
+   There are ways to write 'self-balancing' binary search trees. These self-balancing trees are called AVL trees and Red Black Trees.[^2^]
 
 ## Scenario
 
@@ -405,7 +405,7 @@ This problem helped me practice thinking recursively.
 
 Add your references here. A good reference includes an inline citation, such as [1] , and then down in your references section, you include the full details of the reference. Computer Science research often uses [IEEE] or [ACM Reference format].
 
-harendrakumar123. (2025, September 24). Binary search tree. GeeksforGeeks. https://www.geeksforgeeks.org/dsa/binary-search-tree-data-structure/
+[^2^]: harendrakumar123. (2025, September 24). Binary search tree. GeeksforGeeks. https://www.geeksforgeeks.org/dsa/binary-search-tree-data-structure/
 
 Kumar, M. (2025, September 17). Best 12 stack examples in real life in simple explanation. upGrad blog. https://www.upgrad.com/blog/stack-example-in-real-life/
 
