@@ -92,7 +92,7 @@ Create *at least three* graphics that each visually explain an aspect of your da
 
 #### Graphic 1: Linked List - Add vs Remove
 
-![LinkedList - Add vs Remove]("graphs/linkedlist_add_remove.png");
+![LinkedList - Add vs Remove](/graphs/linkedlist_add_remove.png);
 
 > Insert your comments/observations about the graphic here
 > This graph shows that removing an element from the back of a linked list
@@ -106,7 +106,7 @@ Create *at least three* graphics that each visually explain an aspect of your da
 
 #### Graphic 2: Remove - Sorted Vector, Linked List, & BST
 
-![Remove - Sorted Vector, Linked List, & BST]("graphs/remove.png");
+![Remove - Sorted Vector, Linked List, & BST](/graphs/remove.png);
 
 > Insert your comments/observations about the graphic here
 > I was surprised to see the Linked List to perform that much worst than the other two data structures,
@@ -126,7 +126,7 @@ Create *at least three* graphics that each visually explain an aspect of your da
 
 #### Graphic 3: Add - Sorted Vector, Linked List, & BST
 
-![Add - Sorted Vector, Linked List, & BST]("graphs/add.png");
+![Add - Sorted Vector, Linked List, & BST](graphs/add.png);
 
 > Insert your comments/observations about the graphic here
 > This graph is interesting, as the timings for adding to a sorted vector and linked list are very similar,
