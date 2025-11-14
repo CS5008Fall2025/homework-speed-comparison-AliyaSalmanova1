@@ -1,4 +1,12 @@
 /**
+ * Maximum Depth of Binary Tree
+ *
+ * @author: Aliya Salmanova
+ * @class: CS 5008
+ * @term: Fall 2025
+ */
+
+/**
 * Definition for a binary tree node.
  * struct TreeNode {
  *     int val;
@@ -24,3 +32,11 @@ int maxDepth(struct TreeNode* root) {
 }
 
 //I tested this on leetcode 
+
+/*
+I compared my solution to other solutions on leetcode. 
+The solutions I saw look a bit differently than mine, as it is possible to solve this without a helper function. 
+However, the logic of the solutions are similar. 
+
+This problem helped me practice thinking recursively. 
+*/
